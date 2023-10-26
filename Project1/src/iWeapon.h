@@ -3,8 +3,8 @@
 class iWeapon
 {
 public:
-	iWeapon();
-	virtual ~iWeapon();
+	iWeapon() = default;
+	virtual ~iWeapon() {};
 
 
 	virtual void CreateRobots(int i) = 0;
@@ -18,11 +18,3 @@ private:
 
 
 };
-
-iWeapon::iWeapon()
-{
-}
-
-iWeapon::~iWeapon()
-{
-}

@@ -23,6 +23,11 @@ struct cAABB
 	~cAABB() {}
 	glm::vec3 minV;
 	glm::vec3 maxV;
+
+	glm::vec3 GetCenter()
+	{
+		return (minV + maxV) *0.5f;
+	}
 	void calculateAABB(std::vector<Vertex>& vertices)
 	{
 
@@ -104,7 +109,7 @@ struct cSphere
 		}
 
 		center = (minV + maxV) * 0.5f;
-		radius = maxDistance;
+		radius = glm::length(maxV - minV)/0.5f;
 
 		std::cout << "Sphere Centre : " << center.x << " , " << center.y << " , " << center.z << std::endl;
 		std::cout << "Radius : " << radius<< std::endl;
@@ -125,16 +130,19 @@ public:
 	PhysicsType physicsType;
 	bool isKinematic;
 	void update(float deltatime);
+
 	cAABB UpdateAABB();
 	cSphere UpdateSphere();
 	bool checkCollision(const PhysicsObject& other);
+	void CollisionRes(const PhysicsObject& other);
 	glm::vec3 velocity;
 	glm::vec3 acceleration;
 	float gravityValue;
 	void Initialize(bool isKinematic);
 	cAABB aabb;
+	cAABB updatedAabb;
 	cSphere sphereShape;
-
+	cSphere updatedSphereShape;
 
 };
 

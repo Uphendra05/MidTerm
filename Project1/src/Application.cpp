@@ -119,8 +119,8 @@ float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
  std::vector<Model*> loadedModels;
-extern std::vector<Model*> robotModels ;
-extern std::vector<PhysicsObject*> physicsMeshes;
+std::vector<Model*> robotModels ;
+std::vector<PhysicsObject*> physicsMeshes;
 
 std::vector<std::pair<Model*, Model*>> getRandomPairs(const std::vector<Model*>& models) {
     std::random_device rd;
@@ -407,7 +407,8 @@ int main()
 
 
     bool isCollided = false;
-   
+    float currentFrame = static_cast<float>(glfwGetTime());
+    lastFrame = currentFrame;
 
     while (!glfwWindowShouldClose(window))
     {
@@ -420,8 +421,7 @@ int main()
 
         //player.MovePlayer(window, playerPos);
 
-
-        float currentFrame = static_cast<float>(glfwGetTime());
+        currentFrame = static_cast<float>(glfwGetTime());
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
@@ -430,6 +430,7 @@ int main()
         {
             for (size_t i = 0; i < randomPairs.size(); ++i)
             {
+                /*
                 if (glm::distance(randomPairs[i].first->transform.position, randomPairs[i].second->transform.position) >= 2.5f)
                 {
                     glm::vec3 direction = glm::normalize(randomPairs[i].second->transform.position - randomPairs[i].first->transform.position);
@@ -469,7 +470,7 @@ int main()
                         
                     }
                 }
-
+                */
 
             }
 
@@ -579,13 +580,14 @@ int main()
          for (size_t i = 0; i < physicsMeshes.size(); i++)
          {
              physicsMeshes[i]->update(deltaTime);
-
          }
+
+         float r = 0.0075;
 
          for (size_t i = 0; i < physicsMeshes.size(); i++)
          {
 
-
+            
              for (size_t j = 0; j < physicsMeshes.size(); j++)
              {
                  if (i == j)
@@ -594,27 +596,16 @@ int main()
                  }
                  else
                  {
-                     if (physicsMeshes[i]->physicsType == AABB && physicsMeshes[j]->physicsType == AABB)
+                    
+                     if (physicsMeshes[i]->checkCollision(*physicsMeshes[j]) == true)
                      {
-
-
-                         if (CheckCOllisionAABBvsAABB(physicsMeshes[i]->UpdateAABB(),
-                             physicsMeshes[j]->UpdateAABB()))
+                         if (physicsMeshes[i]->physicsType == SPHERE)
                          {
-                             
-                             isCollided = true;
-                             std::cout << "Collision........" << std::endl;
-
-                             
-
-
-                             //if playerbullet
-
-                             //physicsMeshes[j].model->isVisible = false;
-
+                             glm::vec3 newDirection = -glm::normalize(physicsMeshes[j]->model->transform.position - physicsMeshes[i]->updatedSphereShape.center);
+                             newDirection.z = 0.0f;
+                             newDirection = glm::normalize(newDirection * 2.0f + GGetRandomDirection());
+                             physicsMeshes[i]->velocity =  newDirection * (float)(rand() % 10 + 1);
                          }
-
-
                      }
                  }
 

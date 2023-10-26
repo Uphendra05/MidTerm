@@ -27,10 +27,18 @@ PhysicsObject::~PhysicsObject()
 void PhysicsObject::update(float deltatime)
 {
 	glm::vec3 gravity(0.0f, -9.81f* gravityValue, 0.0f);
-	acceleration = gravity;
-	velocity += acceleration * deltatime;
+	//acceleration = gravity;
+	//velocity += acceleration * deltatime;
 	model->transform.position += velocity * deltatime;
-	
+
+	if (physicsType == AABB)
+	{
+		UpdateAABB();
+	}
+	else
+	{
+		UpdateSphere();
+	}
 
 }
 cAABB  PhysicsObject:: UpdateAABB()
@@ -44,8 +52,8 @@ cAABB  PhysicsObject:: UpdateAABB()
 	glm::vec4 transformedMinV = transformMatrix * glm::vec4(originalMinV, 1.0f);
 	glm::vec4 transformedMaxV = transformMatrix * glm::vec4(originalMaxV, 1.0f);
 
-	return  cAABB(glm::vec3(transformedMinV), glm::vec3(transformedMaxV));
-	
+	updatedAabb =  cAABB(glm::vec3(transformedMinV), glm::vec3(transformedMaxV));
+	return updatedAabb;
 }
 
 cSphere PhysicsObject::UpdateSphere()
@@ -61,9 +69,75 @@ cSphere PhysicsObject::UpdateSphere()
 	scaleMatrix[2][2] = model->transform.scale.z;
 
 	float maxScale = glm::max(model->transform.scale.x, glm::max(model->transform.scale.y, model->transform.scale.z));
-	float updatedRadius = orginalRadius * maxScale;
+	float updatedRadius = orginalRadius * maxScale * 0.15f;
 
-	return cSphere(glm::vec3(transformedCenter), updatedRadius);
+	updatedSphereShape =  cSphere(glm::vec3(transformedCenter), updatedRadius);
+
+	return updatedSphereShape;
+}
+
+bool PhysicsObject::checkCollision(const PhysicsObject& other)
+{
+	switch(physicsType)
+	{
+	case PhysicsType::AABB:
+		if (other.physicsType == AABB)
+		{
+			return CheckCOllisionAABBvsAABB(updatedAabb, other.updatedAabb);
+		}
+		else
+		{
+			return CheckSphereAABBCollision(other.updatedSphereShape, updatedAabb);
+		}
+		break;
+
+	case PhysicsType::SPHERE:
+
+		if (other.physicsType == AABB)
+		{
+			return CheckSphereAABBCollision(updatedSphereShape, other.updatedAabb);
+		}
+		else
+		{
+			return CheckSpherevsSphereCollision(updatedSphereShape, other.updatedSphereShape);
+		}
+
+		break;
+	}
+
+
+	// default supported
+	return false;
+}
+
+void PhysicsObject::CollisionRes(const PhysicsObject& other)
+{
+	switch (physicsType)
+	{
+	case PhysicsType::AABB:
+		if (other.physicsType == AABB)
+		{
+			
+		}
+		else
+		{
+			
+		}
+		break;
+
+	case PhysicsType::SPHERE:
+
+		if (other.physicsType == AABB)
+		{
+			
+		}
+		else
+		{
+			
+		}
+
+		break;
+	}
 }
 
 void PhysicsObject::Initialize(bool isKinematic)

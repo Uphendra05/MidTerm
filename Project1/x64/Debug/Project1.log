@@ -1,24 +1,21 @@
 ﻿  Application.cpp
-E:\Exam Projects\Patterns Mid Term\Graphics-Opengl-main\Project1\Project1\src\Robot.h(43,42): warning C4305: 'argument': truncation from 'double' to 'T'
-          with
-          [
-              T=float
-          ]
-E:\Exam Projects\Patterns Mid Term\Graphics-Opengl-main\Project1\Project1\src\Application.cpp(44,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-E:\Exam Projects\Patterns Mid Term\Graphics-Opengl-main\Project1\Project1\src\Application.cpp(95,61): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+C:\Users\sudha\OneDrive\Desktop\Project\Ooramootu project\MidTerm\Project1\src\Application.cpp(44,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sudha\OneDrive\Desktop\Project\Ooramootu project\MidTerm\Project1\src\Application.cpp(95,61): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-E:\Exam Projects\Patterns Mid Term\Graphics-Opengl-main\Project1\Project1\src\Application.cpp(100,62): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+C:\Users\sudha\OneDrive\Desktop\Project\Ooramootu project\MidTerm\Project1\src\Application.cpp(100,62): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-E:\Exam Projects\Patterns Mid Term\Graphics-Opengl-main\Project1\Project1\src\Application.cpp(278,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-E:\Exam Projects\Patterns Mid Term\Graphics-Opengl-main\Project1\Project1\src\Application.cpp(743,39): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\Users\sudha\OneDrive\Desktop\Project\Ooramootu project\MidTerm\Project1\src\Application.cpp(278,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\sudha\OneDrive\Desktop\Project\Ooramootu project\MidTerm\Project1\src\Application.cpp(585,18): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\sudha\OneDrive\Desktop\Project\Ooramootu project\MidTerm\Project1\src\Application.cpp(415,25): warning C4101: 'randomDirection': unreferenced local variable
+C:\Users\sudha\OneDrive\Desktop\Project\Ooramootu project\MidTerm\Project1\src\Application.cpp(734,39): warning C4305: 'argument': truncation from 'double' to 'T'
           with
           [
               T=float
           ]
-  Project1.vcxproj -> E:\Exam Projects\Patterns Mid Term\Graphics-Opengl-main\Project1\x64\Debug\Project1.exe
+  Project1.vcxproj -> C:\Users\sudha\OneDrive\Desktop\Project\Ooramootu project\MidTerm\x64\Debug\Project1.exe
