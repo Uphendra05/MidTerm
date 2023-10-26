@@ -1,0 +1,98 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 14.06.2015 16:09:45
+
+newmtl Tex_0021_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+
+newmtl Tex_0036_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0036_0.dds
+	map_Kd D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0036_0.dds
+
+newmtl Tex_0038_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0038_0.dds
+	map_Kd D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0038_0.dds
+
+newmtl Tex_0039_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0039_0.dds
+	map_Kd D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0039_0.dds
+
+newmtl Tex_0041_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0041_0.dds
+	map_Kd D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0041_0.dds
+
+newmtl Tex_0042_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0042_0.dds
+	map_Kd D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0042_0.dds
+
+newmtl Tex_0040_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0040_0.dds
+	map_Kd D:\My_dokuments\Downloads\CRYENGINE_PC_v_3_5_3_FreeSDK\Bin32\_Ripper\14.06.2015_09.50.12\Frames\Frame0019\Tex_0040_0.dds
